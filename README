@@ -1,0 +1,7 @@
+This is a forked version of gluon-status-page-api,
+copied from https://github.com/freifunk-gluon/gluon/tree/master/package/gluon-status-page-api
+
+It is modified to not provide contact information (email address) on the
+status page.
+
+Licensed as the original package, see LICENSE.
