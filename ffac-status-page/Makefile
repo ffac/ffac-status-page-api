@@ -1,16 +1,17 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=gluon-status-page
+PKG_NAME:=ffac-status-page
 PKG_VERSION:=3
 
-include ../gluon.mk
+include $(TOPDIR)/../package/gluon.mk
 
-define Package/gluon-status-page
+define Package/ffac-status-page
   TITLE:=Status page showing information about the node
   DEPENDS:=+gluon-web +gluon-neighbour-info +gluon-respondd +uhttpd +sse-multiplex +libiwinfo +libjson-c +libnl-tiny +libubus-lua
+  PROVIDES:=gluon-status-page
 endef
 
-define Package/gluon-status-page/install
+define Package/ffac-status-page/install
 	$(Gluon/Build/Install)
 
 	$(INSTALL_DIR) $(1)/lib/gluon/status-page/providers
@@ -21,4 +22,4 @@ define Package/gluon-status-page/install
 	$(LN) /lib/gluon/web/view/error $(1)/lib/gluon/status-page/view/
 endef
 
-$(eval $(call BuildPackageGluon,gluon-status-page))
+$(eval $(call BuildPackageGluon,ffac-status-page))
