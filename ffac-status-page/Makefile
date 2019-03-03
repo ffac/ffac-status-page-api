@@ -3,7 +3,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=gluon-status-page
 PKG_VERSION:=3
 
-include ../gluon.mk
+include $(TOPDIR)/../package/gluon.mk
 
 define Package/gluon-status-page
   TITLE:=Status page showing information about the node
