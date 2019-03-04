@@ -8,6 +8,7 @@ include $(TOPDIR)/../package/gluon.mk
 define Package/ffac-status-page
   TITLE:=Status page showing information about the node
   DEPENDS:=+gluon-web +gluon-neighbour-info +gluon-respondd +uhttpd +sse-multiplex +libiwinfo +libjson-c +libnl-tiny +libubus-lua
+  PROVIDES:=gluon-status-page
 endef
 
 define Package/ffac-status-page/install
